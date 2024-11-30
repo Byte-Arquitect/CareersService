@@ -4,6 +4,8 @@ option csharp_namespace = "CareersService";
 
 package careers;
 
+import "google/protobuf/empty.proto"; 
+
 service Careers {
   rpc GetAll (Empty) returns (CareersList);
 }
@@ -17,4 +19,51 @@ message Career {
 
 message CareersList {
   repeated Career careers = 1;
+}
+
+
+service SubjectService {
+  rpc GetAllSubjects (google.protobuf.Empty) returns (SubjectList);
+  rpc GetPrerequisitesMap (google.protobuf.Empty) returns (PrerequisitesMap);
+  rpc GetPostrequisitesMap (google.protobuf.Empty) returns (PostrequisitesMap);
+  rpc GetPrerequisiteObjects (google.protobuf.Empty) returns (SubjectRelationships);
+}
+
+message Subject {
+  string id = 1;
+  string code = 2;
+  string name = 3;
+  string department = 4;
+  int32 credits = 5;
+  int32 semester = 6;
+}
+
+message SubjectRelationship {
+  string id = 1;
+  string subject_code = 2;
+  string pre_subject_code = 3;
+}
+
+message SubjectList {
+  repeated Subject subjects = 1;
+}
+
+message PrerequisitesMap {
+  map<string, Prerequisites> map = 1;
+}
+
+message Prerequisites {
+  repeated string prereqs = 1;
+}
+
+message PostrequisitesMap {
+  map<string, Postrequisites> map = 1;
+}
+
+message Postrequisites {
+  repeated string postreqs = 1;
+}
+
+message SubjectRelationships {
+  repeated SubjectRelationship relationships = 1;
 }

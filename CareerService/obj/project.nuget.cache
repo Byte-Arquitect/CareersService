@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s/p6STVkeo4=",
+  "dgSpecHash": "ysX7HMcxQPs=",
   "success": true,
   "projectFilePath": "C:\\Users\\buzet\\Desktop\\Arquitectura de sistemas\\CareersService\\CareerService\\CareerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\buzet\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
-    "C:\\Users\\buzet\\.nuget\\packages\\google.protobuf\\3.27.0\\google.protobuf.3.27.0.nupkg.sha512",
+    "C:\\Users\\buzet\\.nuget\\packages\\google.protobuf\\3.28.3\\google.protobuf.3.28.3.nupkg.sha512",
     "C:\\Users\\buzet\\.nuget\\packages\\grpc.aspnetcore\\2.67.0\\grpc.aspnetcore.2.67.0.nupkg.sha512",
     "C:\\Users\\buzet\\.nuget\\packages\\grpc.aspnetcore.server\\2.67.0\\grpc.aspnetcore.server.2.67.0.nupkg.sha512",
     "C:\\Users\\buzet\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.67.0\\grpc.aspnetcore.server.clientfactory.2.67.0.nupkg.sha512",

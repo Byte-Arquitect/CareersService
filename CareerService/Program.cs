@@ -38,6 +38,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddGrpc();
 builder.Services.AddScoped<ICareerRepository, CareerRepository>();
+builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
+builder.Services.AddScoped<careerService.Services.SubjectService>();
 
 builder.WebHost.ConfigureKestrel(options =>
 {
@@ -52,6 +54,8 @@ builder.Logging.AddConsole();
 var app = builder.Build();
 
 app.MapGrpcService<CareerService>();
+app.MapGrpcService<SubjectGrpcService>();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

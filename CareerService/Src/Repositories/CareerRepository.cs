@@ -2,25 +2,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using careerService.Models;
 using MongoDB.Driver;
-
-// namespace careerService.Repositories
-// {
-//     public class CareerRepository : ICareerRepository
-//     {
-//         private readonly IMongoCollection<Career> _careersCollection;
-
-//         public CareerRepository(IMongoDatabase database)
-//         {
-//             _careersCollection = database.GetCollection<Career>("Careers");
-//         }
-
-//         public async Task<IEnumerable<Career>> GetAllCareersAsync()
-//         {
-//             return await _careersCollection.Find(_ => true).ToListAsync();
-//         }
-//     }
-// }
-
 using careerService.Data;
 using Microsoft.Extensions.Options;
 

@@ -18,7 +18,7 @@
           }
         }
       },
-      "Google.Protobuf/3.27.0": {
+      "Google.Protobuf/3.28.3": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -654,14 +654,14 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
-    "Google.Protobuf/3.27.0": {
-      "sha512": "tEaKpc+SP7I3gYW9AHozESyKkrCg8Xe7huI3Q3iUt5t8Dn29r2k1u8jyrGrD16maj/0UsQBM0MDViWEj0iynOA==",
+    "Google.Protobuf/3.28.3": {
+      "sha512": "OewySX3aQCdKfMJsj2DzBMXQJPI+lm0CBzamU9ViFu3CU9tXYrQWqJ1CZ+/UWtkwOjUeIzbXmoOjRc7B8pbMrA==",
       "type": "package",
-      "path": "google.protobuf/3.27.0",
+      "path": "google.protobuf/3.28.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.27.0.nupkg.sha512",
+        "google.protobuf.3.28.3.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -1842,6 +1842,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Google.Protobuf >= 3.28.3",
       "Grpc.AspNetCore >= 2.67.0",
       "Grpc.Core >= 2.46.6",
       "Grpc.Tools >= 2.67.0",
@@ -1893,6 +1894,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Google.Protobuf": {
+            "target": "Package",
+            "version": "[3.28.3, )"
+          },
           "Grpc.AspNetCore": {
             "target": "Package",
             "version": "[2.67.0, )"
