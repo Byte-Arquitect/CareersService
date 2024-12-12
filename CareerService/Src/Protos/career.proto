@@ -2,12 +2,18 @@ syntax = "proto3";
 
 option csharp_namespace = "CareersService";
 
-package careers;
-
+import "google/api/annotations.proto";
 import "google/protobuf/empty.proto"; 
 
+package careers;
+
+
 service Careers {
-  rpc GetAll (Empty) returns (CareersList);
+  rpc GetAll (Empty) returns (CareersList){
+    option (google.api.http) = {
+      get: "/career"
+  };
+  }
 }
 
 message Empty {}
@@ -23,10 +29,26 @@ message CareersList {
 
 
 service SubjectService {
-  rpc GetAllSubjects (google.protobuf.Empty) returns (SubjectList);
-  rpc GetPrerequisitesMap (google.protobuf.Empty) returns (PrerequisitesMap);
-  rpc GetPostrequisitesMap (google.protobuf.Empty) returns (PostrequisitesMap);
-  rpc GetPrerequisiteObjects (google.protobuf.Empty) returns (SubjectRelationships);
+  rpc GetAllSubjects (google.protobuf.Empty) returns (SubjectList){
+      option (google.api.http) = {
+        get: "/subject"
+    };
+  }
+  rpc GetPrerequisitesMap (google.protobuf.Empty) returns (PrerequisitesMap){
+      option (google.api.http) = {
+        get: "/subject/prerequisites-map"
+    };
+  }
+  rpc GetPostrequisitesMap (google.protobuf.Empty) returns (PostrequisitesMap){
+    option (google.api.http) = {
+      get: "/subject/postrequisites-map"
+  };
+  }
+  rpc GetPrerequisiteObjects (google.protobuf.Empty) returns (SubjectRelationships){
+    option (google.api.http) = {
+      get: "/subject/prerequisites-map/objects"
+  };
+  }
 }
 
 message Subject {

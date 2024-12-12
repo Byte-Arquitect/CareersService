@@ -36,18 +36,12 @@ builder.Services.AddScoped(sp =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddGrpc();
+builder.Services.AddGrpc().AddJsonTranscoding();
 builder.Services.AddScoped<ICareerRepository, CareerRepository>();
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
 builder.Services.AddScoped<careerService.Services.SubjectService>();
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(5093, listenOptions =>
-    {
-        listenOptions.Protocols = Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols.Http2;
-    });
-});
+
 builder.Logging.AddConsole();
 
 
@@ -67,5 +61,5 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 
-app.Run();
+app.Run();  
 
