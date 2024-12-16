@@ -7,9 +7,8 @@ Este proyecto utiliza .NET 8 como framework principal y MongoDB como base de dat
 
 Antes de comenzar, asegúrate de tener lo siguiente instalado en tu máquina:
 
-- **.NET SDK 8.0** o superior
-- **MongoDB** (Local o remoto)
-- **Git** (Para clonar el repositorio)
+- **[.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)** o superior 
+- **[Git](https://git-scm.com/downloads)** (Para clonar el repositorio)
 
 ## Configuración Inicial
 
@@ -28,7 +27,7 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu máquina:
 
 3. **Configura la Base de Datos**
 
-
+   - Este proyecto utiliza una base de datos desplegada en **MongoDB Atlas**, por lo que no es necesario instalar MongoDB localmente.
    - Asegúrate que la cadena de conexión en `appsettings.json` se vea de la siguiente manera:
 
      ```json
@@ -58,7 +57,7 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu máquina:
 
 ## Endpoints
 
-A continuación, se describen los endpoints principales de la API. Puedes utilizar herramientas como Postman para probarlos.
+A continuación, se describen los endpoints principales de la API. Puedes utilizar herramientas como Postman, cURL o Swagger para probarlos.
 
 - **GET /career**: Obtiene una lista de todas las carreras.
 - **GET /subject**: Obtiene una lista de todas las asiganturas.
