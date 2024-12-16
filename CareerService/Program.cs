@@ -7,6 +7,7 @@ using careerService.Repositories;
 using careerService.Data;
 using MongoDB.Driver;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<CareerServiceDbSettings>(
